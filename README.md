@@ -108,6 +108,11 @@ Source: <http://www.aeonscope.net/2010/02/22/managing-multiple-heroku-accounts/>
 
 #### Git Submodules
 
+Run these commands to initialize & load the submodules of this repo:
+
+  git submodule init
+  git submodule update
+
 <http://book.git-scm.com/5_submodules.html>
 
 
