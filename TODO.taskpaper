@@ -24,4 +24,6 @@ Setup Local Rails App:
 		- rspec
 		- cucumber
 		- 
+Improve Git Repo:
+	- Make acani-iphone a submodule
 

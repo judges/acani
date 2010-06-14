@@ -98,10 +98,18 @@ Heroku Rails 3: <http://docs.heroku.com/rails3>
   gem install bundler -v 0.9.5
   gem install rails -v 3.0.0.beta --pre
 
+#### Heroku
 
-#### Add acani to your heroku accounts
+  gem install heroku
+  
+  * Add acani to your heroku accounts
 
 Source: <http://www.aeonscope.net/2010/02/22/managing-multiple-heroku-accounts/>
+
+#### Git Submodules
+
+<http://book.git-scm.com/5_submodules.html>
+
 
 API
 ---
