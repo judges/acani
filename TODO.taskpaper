@@ -1,0 +1,27 @@
+Get Matt Situated:
+	- get him a wireless card so he can use wireless on train
+	- better yet, get him an apartment in NYC
+
+Setup Heroku:
+	- create acani app & deploy to rails 3 stack
+		- heroku create acani --stack bamboo-mri-1.9.1
+		- http://docs.heroku.com/bamboo#migrating-to-bamboo
+	- add guys as heroku collaborators
+		- http://docs.heroku.com/sharing#viewing-an-apprsquos-collaborator-list
+	- setup mongodb: heroku addons:add mongohq:free
+		- http://docs.heroku.com/mongohq
+	- find out versions for: ruby, rails, mongdb
+	Staging Site:
+		- create dummy data with faker gem
+		- sync with master & deploy to heroku staging site
+	- setup mongodb on heroku
+	- migrate to rails3 on h
+Setup Local Rails App:
+	- write instructions to README.md
+	- Install mongoDB
+	Install Gems:
+		- rails 3 beta @done(2010-06-13)
+		- rspec
+		- cucumber
+		- 
+
