@@ -1,29 +1,80 @@
+Project Summary:
+	- Thumbnail View: photo grid w/ flags; header & iAd footer - 6/13 
+	- Photo View: profile photo & info; favorite, block, & chat buttons. - 6/20
+	- Edit View: edit profile fields, filters, & groups; edit group specific settings - 6/27
+	- Chat View: chat; more button to send location, photo, clear chat. Push notifications - 7/4
+	- Launcher View: add/search new people/groups to your launcher; rearrange; log out - 7/11
+	- Interface w/ Network Server. FBConnect & Twitter. Test & final touches. - 7/18 - 8/1
+
+Week 2; Sunday, 6/13 - 6/20:
+	Matt:
+		User should be able to POST[:id, :x, :y] to http://acani.heroku.com/ and get JSON response:
+			Flow:
+				- id: device_id; x: longitude; y: latitude
+				- Update db: Create user if doesn't yet exist: find({ :device_id: id }); update location.
+				- Respond with my groups, users in similar groups & nearby, new messages
+			Prereqs:
+				- Figure out if we should store group icons in mongodb or static file system
+				- Figure out Group, User, Message schema
+					- rails g rspec:scaffold Group name:string...
+				- Populate database with real groups & fake users (with faker gem)
+	Abhinav:
+		Parse JSON for Objective-C:
+			- Create User, Group, and Message classes in Objective-C
+			- Parse JSON and create Objective-C instances of Users, Groups, and Messages
+				- First, go through tutorial: http://github.com/clarkware/iphone-rails-tutorial/
+		Put User info on Photo View:
+			- Get User info from User instance created from JSON
+			- Make it just like Grindr for now, except keep header the bluish-gray color it is now, not yellow
+			- Include Chat, Favorite, and Block buttons for now; functionality can be implemented later
+		Load Thumbnail View:
+			- For each User object, use thumb_url to load thumbnail photo
+				- First, randomly load different shades & versions of default (blank) photo
+				- Show spinning dashes to signify that thumbnail is in the process of being loaded
+			- Add flair: username, red number, star, green dot, blue & yellow border/background 
+	Peng:
+		Use three20 as much as possible
+		Design UI for Launcher Page:
+			- Make icons smaller, like Facebook
+			- Add dots at bottom to represent pages & current page
+			- Add hard-coded red numbers to a few of the group icons
+				- Launcher View does this in TTCatalog. Figure out how and implement.
+		Design UI for Edit Profile page:
+			- Use Grindr's Edit Profile page & iPhone's Edit Contact page as guides
+			- Add a profile icon (similar to the one Facebook uses) as the top-middle icon to the Launcher
+				- Disable the ability to remove this profile button when clicking & holding
+			- Link the profile icon to the edit profile page
+		Design UI for Chat page: @next
+			Do this if you can get to it. Otherwise, we'll do it next week.
+			- Include thses same features from Grindr chat:
+				- More button in upper right (should allow you to send location, photos, or clear chat)
+				- Profile button in upper left (should take you back to profile)
+				- Chat should open with keyboard minimized. Clicking on text field at botton opens keyboard.
+			- Like Facebook chat: show a small thumbnail of profile photo next to each message.
+			- Like iPhone text: show timestamps above messages
+Recurring:
+	- Keep TODO, README (getting started, etc.), RECIPES, HISTORY, etc. up to date
+Backlog:
+	Launcher View:
+		- Make search prettier @peng
+		- Make add-button and search-buttons work @abhinav
+		- Load groups from JSON response @abhinav
+		- Make button that goes back to Launcher View 9 squares, not 4
+	Git:
+		- Make acani-iphone a Git submodule
+	Heroku:
+		- Find out versions for: ruby, rails, mongdb
+		- Deploy to staging site first to test changes
 Get Matt Situated:
 	- get him a wireless card so he can use wireless on train
 	- better yet, get him an apartment in NYC
-
-Setup Heroku:
-	- create acani app & deploy to rails 3 stack
-		- heroku create acani --stack bamboo-mri-1.9.1
-		- http://docs.heroku.com/bamboo#migrating-to-bamboo
-	- add guys as heroku collaborators
-		- http://docs.heroku.com/sharing#viewing-an-apprsquos-collaborator-list
-	- setup mongodb: heroku addons:add mongohq:free
-		- http://docs.heroku.com/mongohq
-	- find out versions for: ruby, rails, mongdb
-	Staging Site:
-		- create dummy data with faker gem
-		- sync with master & deploy to heroku staging site
-	- setup mongodb on heroku
-	- migrate to rails3 on h
-Setup Local Rails App:
-	- write instructions to README.md
-	- Install mongoDB
-	Install Gems:
-		- rails 3 beta @done(2010-06-13)
-		- rspec
-		- cucumber
-		- 
-Improve Git Repo:
-	- Make acani-iphone a submodule
-
+Archive:
+	- Install mongoDB @done(2010-06-16) @project(Recurring)
+	- setup mongodb on heroku @done(2010-06-16) @project(Setup Heroku)
+	- migrate to rails3 on heroku @done(2010-06-16) @project(Setup Heroku)
+	- rails 3 beta @done(2010-06-13) @project(Setup Local Rails App / Install Gems)
+	- rspec @done(2010-06-15) @project(Setup Local Rails App / Install Gems)
+	- cucumber @done(2010-06-15) @project(Setup Local Rails App / Install Gems)
+	- capybara @done(2010-06-15) @project(Setup Local Rails App / Install Gems)
+	- haml & sass @done(2010-06-16) @project(Setup Local Rails App / Install Gems)
+	- mongo & bson_ext @done(2010-06-16) @project(Setup Local Rails App / Install Gems)

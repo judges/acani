@@ -73,13 +73,50 @@ Inspirations
 Getting Started on Mac OS 10.6
 ------------------------------
 
-* Xcode: <http://developer.apple.com/technologies/xcode.html>
-* Git: <http://www.mattdipasquale.com/node/35>
+### Xcode
+
+#### Download & Install
+
+<http://developer.apple.com/technologies/xcode.html>
+
+
+### Git
+
+#### Download & Install from Source on Mac OS 10.6
+
+  Run the following terminal commands:
+
+  # **C**hange **D**irectory to where you want to store Git's source files
+  cd ~/Sources/ # where I store source code that I don't work on
+
+[TODO: paste install code from reference below here]
+
+Reference: <http://www.mattdipasquale.com/node/35>
+
+#### Clone Repositories
+
+Run the following terminal commands:
+
+  # **C**hange **D**irectory to where you want to store acani's source files
+  cd ~/Projects/ # where I store projects that I work on
+  
+  # Clone the repository to your machine 
+  git clone git@github.com:acani/acani.git
+  
+  # Initialize & update the submodules according to .gitmodules
+  git submodule init
+  git submodule update
+
+#### Required Reading
+
+* Submodules: <http://book.git-scm.com/5_submodules.html>
+* Workflow: [link to git workflow]
+* Great Book: <http://book.git-scm.com/>
+
 
 ### Install Ruby & Gems with RVM
 
 RVM: <http://rvm.beginrescueend.com/rvm/basics/>
-Heroku Rails 3: <http://docs.heroku.com/rails3>
 
 #### RVM
   bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
@@ -96,24 +133,21 @@ Heroku Rails 3: <http://docs.heroku.com/rails3>
   rvm list default ; rvm gemset name # check what your default ruby is
   
   gem install bundler -v 0.9.5
-  gem install rails -v 3.0.0.beta --pre
+  bundle install  # installs the gems for this rails app, listed in Gemfile
+  bundle lock
 
 #### Heroku
 
   gem install heroku
-  
-  * Add acani to your heroku accounts
 
-Source: <http://www.aeonscope.net/2010/02/22/managing-multiple-heroku-accounts/>
+### Install MongoDB
 
-#### Git Submodules
+<http://www.mongodb.org/display/DOCS/Quickstart>
 
-Run these commands to initialize & load the submodules of this repo:
-
-  git submodule init
-  git submodule update
-
-<http://book.git-scm.com/5_submodules.html>
+  # If installing or upgrading with homebrew, automatically load on login with:
+  launchctl unload -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
+  cp /usr/local/Cellar/mongodb/1.4.3-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents
+  launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
 
 
 API
