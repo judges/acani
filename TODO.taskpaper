@@ -1,12 +1,14 @@
 Project Summary:
-	- Thumbnail View: photo grid w/ flags; header & iAd footer - 6/13 
-	- Photo View: profile photo & info; favorite, block, & chat buttons. - 6/20
-	- Edit View: edit profile fields, filters, & groups; edit group specific settings - 6/27
-	- Chat View: chat; more button to send location, photo, clear chat. Push notifications - 7/4
-	- Launcher View: add/search new people/groups to your launcher; rearrange; log out - 7/11
-	- Interface w/ Network Server. FBConnect & Twitter. Test & final touches. - 7/18 - 8/1
+	- Week 1: Thumbnail View: photo grid w/ flags; header & iAd footer - 6/13 
+	- Week 2: Photo View: profile photo & info; favorite, block, & chat buttons. - 6/20
+	- Week 3: Edit View: edit profile fields, filters, & groups; edit group specific settings - 6/27
+	- Week 4: Chat View: chat; more button to send location, photo, clear chat. Push notifications - 7/4
+	- Week 5: Launcher View: add/search new people/groups to your launcher; rearrange; log out - 7/11
+	- Week 6: Interface w/ Network Server. FBConnect & Twitter. Test & final touches. - 7/18 - 8/1
 
-Week 2; Sunday, 6/13 - 6/20:
+
+Week 2: Sunday, 6/13 - 6/20:
+	Photo View: profile photo & info; favorite, block, & chat buttons.
 	Matt:
 		User should be able to POST[:id, :x, :y] to http://acani.heroku.com/ and get JSON response:
 			Flow:
@@ -19,7 +21,7 @@ Week 2; Sunday, 6/13 - 6/20:
 					- rails g rspec:scaffold Group name:string...
 				- Populate database with real groups & fake users (with faker gem)
 	Abhinav:
-		Parse JSON for Objective-C:
+		Parse sample JSON for Objective-C:
 			- Create User, Group, and Message classes in Objective-C
 			- Parse JSON and create Objective-C instances of Users, Groups, and Messages
 				- First, go through tutorial: http://github.com/clarkware/iphone-rails-tutorial/
@@ -52,7 +54,29 @@ Week 2; Sunday, 6/13 - 6/20:
 				- Chat should open with keyboard minimized. Clicking on text field at botton opens keyboard.
 			- Like Facebook chat: show a small thumbnail of profile photo next to each message.
 			- Like iPhone text: show timestamps above messages
+
+Week 3: Sunday, 6/20 - 6/27:
+	Edit View: edit profile fields, filters, & groups; edit group specific settings
+	Abhinav:
+
+	Matt:
+		- Handle Block & Favorite buttons
+		- Make Team Page
+		- Update profile info & photo
+		- Search groups
+	Peng:
+
+	Unassigned:
+		
+Next:
+	Chat server:
+		- Send message
+		- Receive message
+		- Send photo
+		- Send location
+	
 Recurring:
+	- Push to Git after adding each new feature
 	- Keep TODO, README (getting started, etc.), RECIPES, HISTORY, etc. up to date
 Backlog:
 	Launcher View:
@@ -60,6 +84,8 @@ Backlog:
 		- Make add-button and search-buttons work @abhinav
 		- Load groups from JSON response @abhinav
 		- Make button that goes back to Launcher View 9 squares, not 4
+		- Put update to server when group icons are added or rearranged
+		- 
 	Git:
 		- Make acani-iphone a Git submodule
 	Heroku:
@@ -69,12 +95,46 @@ Get Matt Situated:
 	- get him a wireless card so he can use wireless on train
 	- better yet, get him an apartment in NYC
 Archive:
-	- Install mongoDB @done(2010-06-16) @project(Recurring)
-	- setup mongodb on heroku @done(2010-06-16) @project(Setup Heroku)
-	- migrate to rails3 on heroku @done(2010-06-16) @project(Setup Heroku)
-	- rails 3 beta @done(2010-06-13) @project(Setup Local Rails App / Install Gems)
-	- rspec @done(2010-06-15) @project(Setup Local Rails App / Install Gems)
-	- cucumber @done(2010-06-15) @project(Setup Local Rails App / Install Gems)
-	- capybara @done(2010-06-15) @project(Setup Local Rails App / Install Gems)
-	- haml & sass @done(2010-06-16) @project(Setup Local Rails App / Install Gems)
-	- mongo & bson_ext @done(2010-06-16) @project(Setup Local Rails App / Install Gems)
+	Week 1: Sunday, 6/6 - 6/13:
+		Abhinav:
+			Thumbnail View:
+				- Link Thumbnail View to Photo View
+			Photo View:
+				- Load More Photos at bottom of Thumbnail View
+		Matt:
+			Setup:
+				Local:
+					- Using RVM, install Ruby 1.9.1 and create a new gemset called acani
+					- Install homebrew
+					- Install mongoDB using homebrew
+					gem install:
+						- rails 3 beta
+						- rspec
+						- cucumber
+						- capybara
+						- haml & sass
+						- mongo & bson_ext
+					- Create Rails 3 app, acani
+				GitHub:
+					- Create acani account
+					- Add Peng & Abhinav as collaborators
+					- Create acani & acani-rails repos and git push
+				Heroku:
+					- Create acani account
+						- Configure laptop to easily switch between personal & acani accounts
+					- Create acani app on Bambo stack (Ruby 1.9.1, Rails 3) at http://acani.heroku.com/
+					- Add mongoHQ support
+					- Invite myself, Abhinav, and Peng as collaborators
+					- Deploy rails app: git push heroku master
+			Manage:
+				- Create text files: README, TODO, RECIPES, HISTORY, FLOW, LICENSE
+				- Plan, document, and communicate
+		Peng:
+			Launcher View:
+				- Add Logout button
+				- Add plus (+) button
+					- Open add view on click
+				- Add search bar
+					- Open search view on click
+				- Add 9 group icons
+				- Link icons to Thumbnail View
