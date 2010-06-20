@@ -39,6 +39,7 @@ Week 2: Sunday, 6/13 - 6/20:
 		Design UI for Launcher Page:
 			- Make icons smaller, like Facebook
 			- Add dots at bottom to represent pages & current page
+			- Show instructions to add groups on the second page if empty, like Facebook
 			- Add hard-coded red numbers to a few of the group icons
 				- Launcher View does this in TTCatalog. Figure out how and implement.
 		Design UI for Edit Profile page:
