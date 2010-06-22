@@ -1,3 +1,6 @@
 [submodule "acani-rails"]
 	path = acani-rails
 	url = git@github.com:acani/acani-rails.git
+[submodule "acani-sinatra"]
+	path = acani-sinatra
+	url = git@github.com:acani/acani-sinatra.git
