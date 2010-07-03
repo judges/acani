@@ -59,8 +59,20 @@ Week 2: Sunday, 6/13 - 6/20:
 Week 3: Sunday, 6/20 - 6/27:
 	Edit View: edit profile fields, filters, & groups; edit group specific settings
 	Abhinav:
-
+		- See Week 2
+		- Most important is displaying the Thumbnail View so that I can browse others
+			- The flags are not important for nowjjjjj
 	Matt:
+		- Add new user
+		Chat server:
+			- Send message
+			- Receive message
+			- web socket html5 - http://github.com/gimite/web-socket-ruby
+			- erlang & ejabberd
+			- Send location
+			- Send photo
+
+		- Chat with someone
 		- Handle Block & Favorite buttons
 		- Make Team Page
 		- Update profile info & photo
@@ -68,16 +80,10 @@ Week 3: Sunday, 6/20 - 6/27:
 	Peng:
 		Launcher:
 			- Connect search
-		
-	Unassigned:
+		Chat:
+			- Design UI
 		
 Next:
-	Chat server:
-		- Send message
-		- Receive message
-		- Send photo
-		- Send location
-	
 Recurring:
 	- Push to Git after adding each new feature
 	- Keep TODO, README (getting started, etc.), RECIPES, HISTORY, etc. up to date
