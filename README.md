@@ -14,7 +14,7 @@ acani allows you to connect and play with people who are nearby and have similar
 Definite Chief Aim
 ------------------
 
-On the 20th day of August, 2010, acani will have a net worth of $1,000,000. In return, we shall build an extraordinary iPhone application called acani. We shall cause acani to make it into the App Store and to attract & register 1,000,000 users and generate 1,000,000 weekly active users. We shall each spend at least 10 hours/week causing the development & success of acani. acani will cause people & organizations to connect and work & play together to have fun, to grow & develop, to give back, and to be happy, healthy, wealthy, loving, abundant, joyous, powerful, and fulfilled. acani will continue to grow at an increasing rate and within one (1) year of it's release, it will have spread to other platforms, such as the Internet, Android, Blackberry, and more. The whole world will use it as the de-facto way to connect with others, have fun, and get into action & be productive.
+On the 13th day of October, 2010, acani will have a net worth of $1,000,000. In return, we shall build an extraordinary iPhone application called acani. We shall cause acani to make it into the App Store and to attract & register 1,000,000 users and generate 1,000,000 weekly active users. We shall each spend at least 10 hours/week causing the development & success of acani. acani will cause people & organizations to connect and work & play together to have fun, to grow & develop, to give back, and to be happy, healthy, wealthy, loving, abundant, joyous, powerful, and fulfilled. acani will continue to grow at an increasing rate and within one (1) year of it's release, it will have spread to other platforms, such as the Internet, Android, Blackberry, and more. The whole world will use it as the de-facto way to connect with others, have fun, and get into action & be productive.
 
                                                                  SECRET
 
@@ -22,15 +22,21 @@ On the 20th day of August, 2010, acani will have a net worth of $1,000,000. In r
 Milestones
 ----------
 
-### Friday, August 20, 2010 — 5pm
+### Wednesday, October 13, 2010 — 5pm
 
 * 1,000,000 users
 * 1,000,000 weekly active users
 * $1,000/day
 
+### Monday, August 20, 2010 — 5pm
+
+
+### Friday, August 20, 2010 — 5pm
+
+* iPhone app version 1.0.0 complete and submitted to the App Store
+
 ### Friday, August 6, 2010 — 7pm
 
-* iPhone app version 1.0.0 complete and in the App Store
 
 ### Friday, July 9, 2010 — 7pm
 
