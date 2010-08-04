@@ -138,7 +138,7 @@ RVM: <http://rvm.beginrescueend.com/rvm/basics/>
   # Quit & Relaunch Terminal
   rvm list default ; rvm gemset name # check what your default ruby is
   
-  gem install bundler -v 0.9.5
+  gem install bundler
   bundle install  # installs the gems for this rails app, listed in Gemfile
   bundle lock
 
