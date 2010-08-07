@@ -1,148 +1,58 @@
 Project Summary:
-	- Week 1: Thumbnail View: photo grid w/ flags; header & iAd footer - 6/13 
-	- Week 2: Photo View: profile photo & info; favorite, block, & chat buttons. - 6/20
-	- Week 3: Edit View: edit profile fields, filters, & groups; edit group specific settings - 6/27
-	- Week 4: Chat View: chat; more button to send location, photo, clear chat. Push notifications - 7/4
-	- Week 5: Launcher View: add/search new people/groups to your launcher; rearrange; log out - 7/11
-	- Week 6: Interface w/ Network Server. FBConnect & Twitter. Test & final touches. - 7/18 - 8/1
+	Pages:
+		- Launcher View: add/search new people/groups to your launcher; rearrange; log out
+		- UsersView: photo grid w/ flags; header & iAd footer
+		- PhotoView: profile photo & info; favorite, block, & chat buttons
+		- ProfileView: edit profile fields, filters, & groups; edit group specific settings
+		- ChatView: chat; more button to send location, photo, clear chat. Push notifications
+		- Interface w/ Network Server. FBConnect & Twitter. Test & final touches
 
-
-Week 2: Sunday, 6/13 - 6/20:
-	Photo View: profile photo & info; favorite, block, & chat buttons.
-	Matt:
-		User should be able to POST[:id, :x, :y] to http://acani.heroku.com/ and get JSON response:
-			Flow:
-				- id: device_id; x: longitude; y: latitude
-				- Update db: Create user if doesn't yet exist: find({ :device_id: id }); update location.
-				- Respond with my groups, users in similar groups & nearby, new messages
-			Prereqs:
-				- Figure out if we should store group icons in mongodb or static file system
-				- Figure out Group, User, Message schema
-					- rails g rspec:scaffold Group name:string...
-				- Populate database with real groups & fake users (with faker gem)
-	Abhinav:
-		Parse sample JSON for Objective-C:
-			- Create User, Group, and Message classes in Objective-C
-			- Parse JSON and create Objective-C instances of Users, Groups, and Messages
-				- First, go through tutorial: http://github.com/clarkware/iphone-rails-tutorial/
-		Put User info on Photo View:
-			- Get User info from User instance created from JSON
-			- Make it just like Grindr for now, except keep header the bluish-gray color it is now, not yellow
-			- Include Chat, Favorite, and Block buttons for now; functionality can be implemented later
-		Load Thumbnail View:
-			- For each User object, use thumb_url to load thumbnail photo
-				- First, randomly load different shades & versions of default (blank) photo
-				- Show spinning dashes to signify that thumbnail is in the process of being loaded
-			- Add flair: username, red number, star, green dot, blue & yellow border/background 
-	Peng:
-		Use three20 as much as possible
-		Design UI for Launcher Page:
-			- Make icons smaller, like Facebook
-			- Add dots at bottom to represent pages & current page
-			- Show instructions to add groups on the second page if empty, like Facebook
-			- Add hard-coded red numbers to a few of the group icons
-				- Launcher View does this in TTCatalog. Figure out how and implement.
-		Design UI for Edit Profile page:
-			- Use Grindr's Edit Profile page & iPhone's Edit Contact page as guides
-			- Add a profile icon (similar to the one Facebook uses) as the top-middle icon to the Launcher
-				- Disable the ability to remove this profile button when clicking & holding
-			- Link the profile icon to the edit profile page
-		Design UI for Chat page: @next
-			Do this if you can get to it. Otherwise, we'll do it next week.
-			- Include thses same features from Grindr chat:
-				- More button in upper right (should allow you to send location, photos, or clear chat)
-				- Profile button in upper left (should take you back to profile)
-				- Chat should open with keyboard minimized. Clicking on text field at botton opens keyboard.
-			- Like Facebook chat: show a small thumbnail of profile photo next to each message.
-			- Like iPhone text: show timestamps above messages
-
-Week 3: Sunday, 6/20 - 6/27:
-	Edit View: edit profile fields, filters, & groups; edit group specific settings
-	Abhinav:
-		- See Week 2
-		- Most important is displaying the Thumbnail View so that I can browse others
-			- The flags are not important for nowjjjjj
-	Matt:
-		- Add new user
-		Chat server:
-			- Send message
-			- Receive message
-			- web socket html5 - http://github.com/gimite/web-socket-ruby
-			- erlang & ejabberd
-			- Send location
-			- Send photo
-
+	Server:
 		- Chat with someone
 		- Handle Block & Favorite buttons
 		- Make Team Page
+		- Create user if doesn't yet exist: find({ :device_id: id }); update location.
 		- Update profile info & photo
-		- Search groups
-	Peng:
-		Launcher:
-			- Connect search
-		Chat:
-			- Design UI
-Next:
+
+	Chat Server:
+		- node.js & redis
+		- Respond with new messages on connect
+		- Send message
+		- Receive message
+		- Websockets HTML5 - http://github.com/gimite/web-socket-ruby
+		- erlang & ejabberd
+		- Send location
+		- Send photo
+
+	Put User info on Photo View:
+		- Get User info from User instance created from JSON
+		- Make it just like Grindr for now, except keep header the bluish-gray color it is now, not yellow
+		- Include Chat, Favorite, and Block buttons
+	Load Thumbnail View:
+		- Load JSON Users into NSMutableArray and load into tableView
+		- For each User object, load thumbnail photo:
+			- First, randomly load different shades & versions of default (blank) photo
+			- Show spinning dashes to signify that thumbnail is in the process of being loaded
+		- Add flair: username, red number, star, green dot, blue & yellow border/background
+		- Add refresh button (spin) & load more guys (disable)
+	ChatView:
+		- ChatContentHeader Buttons: Call, Contact Info/Add to Contacts, [Load Earlier Messages]
+		- Send photos, video, location. 
+		- Edit: delete, forward, clear all
+			- Put each timestamp in its own cell
+		- Rebuild ChatInput & ChatBar with graphics, not background images
+		- Support landscape orientation
+		- Touch ChatContentView to close keyboard
+		- Like Facebook chat, twitterfon show a small thumbnail of profile photo next to each message
 Recurring:
-	- Push to Git after adding each new feature
+	- Push to Git after adding each new feature. Make sure it builds first.
 	- Keep TODO, README (getting started, etc.), RECIPES, HISTORY, etc. up to date
 Backlog:
-	Launcher View:
-		- Make search prettier @peng
-		- Make add-button and search-buttons work @abhinav
-		- Load groups from JSON response @abhinav
-		- Make button that goes back to Launcher View 9 squares, not 4
-		- Put update to server when group icons are added or rearranged
-		- 
 	Git:
 		- Make acani-iphone a Git submodule
-	Heroku:
-		- Find out versions for: ruby, rails, mongdb
-		- Deploy to staging site first to test changes
+	Server:
+		- Get rackspace setup
 Get Matt Situated:
 	- get him a wireless card so he can use wireless on train
-	- better yet, get him an apartment in NYC
-Archive:
-	Week 1: Sunday, 6/6 - 6/13:
-		Abhinav:
-			Thumbnail View:
-				- Link Thumbnail View to Photo View
-			Photo View:
-				- Load More Photos at bottom of Thumbnail View
-		Matt:
-			Setup:
-				Local:
-					- Using RVM, install Ruby 1.9.1 and create a new gemset called acani
-					- Install homebrew
-					- Install mongoDB using homebrew
-					gem install:
-						- rails 3 beta
-						- rspec
-						- cucumber
-						- capybara
-						- haml & sass
-						- mongo & bson_ext
-					- Create Rails 3 app, acani
-				GitHub:
-					- Create acani account
-					- Add Peng & Abhinav as collaborators
-					- Create acani & acani-rails repos and git push
-				Heroku:
-					- Create acani account
-						- Configure laptop to easily switch between personal & acani accounts
-					- Create acani app on Bambo stack (Ruby 1.9.1, Rails 3) at http://acani.heroku.com/
-					- Add mongoHQ support
-					- Invite myself, Abhinav, and Peng as collaborators
-					- Deploy rails app: git push heroku master
-			Manage:
-				- Create text files: README, TODO, RECIPES, HISTORY, FLOW, LICENSE
-				- Plan, document, and communicate
-		Peng:
-			Launcher View:
-				- Add Logout button
-				- Add plus (+) button
-					- Open add view on click
-				- Add search bar
-					- Open search view on click
-				- Add 9 group icons
-				- Link icons to Thumbnail View
+	- Get new bag
+	- Get sleep
