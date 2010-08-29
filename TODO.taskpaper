@@ -1,4 +1,4 @@
-Project Summary:
+acani tasks:
 	Pages:
 		- Launcher View: add/search new people/groups to your launcher; rearrange; log out
 		- UsersView: photo grid w/ flags; header & iAd footer
@@ -7,27 +7,34 @@ Project Summary:
 		- ChatView: chat; more button to send location, photo, clear chat. Push notifications
 		- Interface w/ Network Server. FBConnect & Twitter. Test & final touches
 
+	House-Keeping:
+		- Rename HomeViewController to UsersViewController
+
+	WebSockets:
+		- Connect from the appDelegate and access it from chatViewController via sharedApplication
+
 	Server:
-		- Chat with someone
+		Sinatra & mongoDB
 		- Handle Block & Favorite buttons
 		- Make Team Page
 		- Create user if doesn't yet exist: find({ :device_id: id }); update location.
 		- Update profile info & photo
 
 	Chat Server:
-		- node.js & redis
+		node.js & redis
 		- Respond with new messages on connect
-		- Send message
-		- Receive message
-		- Websockets HTML5 - http://github.com/gimite/web-socket-ruby
-		- erlang & ejabberd
 		- Send location
 		- Send photo
+	
+	Users:
+		- TableView
+		- Refresh
 
 	Put User info on Photo View:
 		- Get User info from User instance created from JSON
 		- Make it just like Grindr for now, except keep header the bluish-gray color it is now, not yellow
 		- Include Chat, Favorite, and Block buttons
+
 	Load Thumbnail View:
 		- Load JSON Users into NSMutableArray and load into tableView
 		- For each User object, load thumbnail photo:
@@ -35,24 +42,39 @@ Project Summary:
 			- Show spinning dashes to signify that thumbnail is in the process of being loaded
 		- Add flair: username, red number, star, green dot, blue & yellow border/background
 		- Add refresh button (spin) & load more guys (disable)
+
 	ChatView:
 		- ChatContentHeader Buttons: Call, Contact Info/Add to Contacts, [Load Earlier Messages]
 		- Send photos, video, location. 
 		- Edit: delete, forward, clear all
 			- Put each timestamp in its own cell
 		- Rebuild ChatInput & ChatBar with graphics, not background images
-		- Support landscape orientation
+		- Support landscape orientation. See SMS Bubbles app
 		- Touch ChatContentView to close keyboard
 		- Like Facebook chat, twitterfon show a small thumbnail of profile photo next to each message
+		- Tap and hold (or double-tap) on table-cell highlights msgText for copying
+			- sets backgroundViewSelected
+			- may require redesign of cell
+				- Make timestamps separate cells
+		- Message sending progress bar at top of navbar
+		- Message animation on send from msgInput to chatContent
+		Fix chatInputView bugs:
+			- Hit return x-times and then backspace x+1-times. Sometimes cursor jumps.
+			- Type a word, hit return, hit backspace. Sometimes weird word suggestion is made.
+
 Recurring:
 	- Push to Git after adding each new feature. Make sure it builds first.
 	- Keep TODO, README (getting started, etc.), RECIPES, HISTORY, etc. up to date
+
 Backlog:
 	Git:
 		- Make acani-iphone a Git submodule
-	Server:
-		- Get rackspace setup
+Misc:
+	- Get RackSpace hosting
+	- Get iPhone Developer account
+
 Get Matt Situated:
 	- get him a wireless card so he can use wireless on train
 	- Get new bag
 	- Get sleep
+	- Get apartment

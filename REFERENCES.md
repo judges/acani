@@ -5,6 +5,8 @@ References
 * http://github.com/miksago/node-websocket-server
 * http://github.com/Guille/node.websocket.js/
 * http://github.com/bobthabuilda/node-websocket-chat
+* http://github.com/gimite/web-socket-ruby
+* erlang & ejabberd
 
 ### node chat
 * github.com/scottgonzalez/node-chat
