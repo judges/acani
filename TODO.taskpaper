@@ -1,4 +1,12 @@
 acani tasks:
+	Next:
+		- Mark messages as read when chatView didDisplay
+		- Filter messages by channel
+		- Add conditional timestamp support
+
+	Refactor:
+		- Write function addMessage:message for send & receive
+
 	Pages:
 		- Launcher View: add/search new people/groups to your launcher; rearrange; log out
 		- UsersView: photo grid w/ flags; header & iAd footer
@@ -6,12 +14,6 @@ acani tasks:
 		- ProfileView: edit profile fields, filters, & groups; edit group specific settings
 		- ChatView: chat; more button to send location, photo, clear chat. Push notifications
 		- Interface w/ Network Server. FBConnect & Twitter. Test & final touches
-
-	House-Keeping:
-		- Rename HomeViewController to UsersViewController
-
-	WebSockets:
-		- Connect from the appDelegate and access it from chatViewController via sharedApplication
 
 	Server:
 		Sinatra & mongoDB
@@ -69,6 +71,7 @@ Recurring:
 Backlog:
 	Git:
 		- Make acani-iphone a Git submodule
+
 Misc:
 	- Get RackSpace hosting
 	- Get iPhone Developer account
