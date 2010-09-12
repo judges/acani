@@ -1,11 +1,13 @@
 acani tasks:
 	Next:
-		- Mark messages as read when chatView didDisplay
-		- Filter messages by channel
+		- User profile & settings storage
+		- Users tableView
 		- Add conditional timestamp support
 
 	Refactor:
 		- Write function addMessage:message for send & receive
+		- How should we be fetching messages?
+		- Mark messages as read all at once instead of inside tableCell function.
 
 	Pages:
 		- Launcher View: add/search new people/groups to your launcher; rearrange; log out
