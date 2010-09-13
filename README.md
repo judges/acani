@@ -4,17 +4,30 @@ acani
 Connect and play with people nearby.
 ------------------------------------
 
-acani allows you to connect and play with people who are nearby and have similar interests.
+acani allows you to connect and play with people nearby with similar interests.
 
 **Possibility**: Being loving, adventurous, and connected.
 
-**Outcome**: People & organizations are connecting and playing & working together to have fun; grow & give back; and be happy, healthy, wealthy, loving, powerful, successful, and fulfilled.
+**Outcome**: People & organizations are connecting and playing & working
+together to have fun; grow & give back; and be happy, healthy, wealthy, loving,
+powerful, successful, and fulfilled.
 
 
 Definite Chief Aim
 ------------------
 
-On the 13th day of October, 2010, acani will have a net worth of $1,000,000. In return, we shall build an extraordinary iPhone application called acani. We shall cause acani to make it into the App Store and to attract & register 1,000,000 users and generate 1,000,000 weekly active users. We shall each spend at least 10 hours/week causing the development & success of acani. acani will cause people & organizations to connect and work & play together to have fun, to grow & develop, to give back, and to be happy, healthy, wealthy, loving, abundant, joyous, powerful, and fulfilled. acani will continue to grow at an increasing rate and within one (1) year of it's release, it will have spread to other platforms, such as the Internet, Android, Blackberry, and more. The whole world will use it as the de-facto way to connect with others, have fun, and get into action & be productive.
+On the 13th day of October, 2010, acani will have a net worth of $1,000,000. In
+return, we shall build an extraordinary Web, mobile, & iPhone application called
+acani. We shall cause acani to make it into iPhone's App Store and to attract &
+register 1,000,000 users and generate 1,000,000 weekly active users. We shall
+each spend at least 10 hours/week causing the development & success of acani.
+acani will cause people & organizations to connect and work & play together to
+have fun, to grow & develop, to give back, and to be happy, healthy, wealthy,
+loving, abundant, joyous, powerful, and fulfilled. acani will continue to grow
+at an increasing rate and within one (1) year of it's release, it will have
+spread to other platforms, such as the Web, Android, Blackberry, and more. The
+whole world will be attracted to it as a way to connect with others, have fun,
+and get into action & be productive.
 
                                                                  SECRET
 
@@ -24,44 +37,26 @@ Milestones
 
 ### Wednesday, October 13, 2010 — 5pm
 
-* 1,000,000 users
-* 1,000,000 weekly active users
-* $1,000/day
-
-### Monday, August 20, 2010 — 5pm
-
-
-### Friday, August 20, 2010 — 5pm
-
 * iPhone app version 1.0.0 complete and submitted to the App Store
-
-### Friday, August 6, 2010 — 7pm
-
-
-### Friday, July 9, 2010 — 7pm
-
-* Server complete
-* iPhone app complete and ready for testing, debugging, and finishing touches
-
-### Friday, June 11, 2010 — 7pm
-
-* Structure for Fulfillment complete & approved
-* Pivotal Tracker & GitHub setup
 
 
 Resources
 ---------
 
-MacBook, Terminal, TextMate, Firefox, Internet, iPhone, Pivotal Tracker, GitHub, Heroku, UserVoice, HTML5, CSS, JavaScript, JQuery, Ruby, Rails, MongoDB, Facebook, Twitter, 10 hours/week, $5,000...
+MacBook, Terminal, TextMate, Firefox, Internet, iPhone, Pivotal Tracker, GitHub,
+Heroku, UserVoice, HTML5, CSS, JavaScript, JQuery, Ruby, Rails, MongoDB,
+Facebook, Twitter, 10 hours/week, $5,000...
 
 
 Platforms
 ---------
 
 * Mobile
+  * HTML5
   * iPhone
   * Blackberry
   * Android
+  * Microsoft
 * Web
   * Site: http://www.acani.com/
   * API: http://api.acani.com/
@@ -74,6 +69,7 @@ Inspirations
 
 * Facebook & three20
 * Grindr
+* Accidental Billionaires & The Social Network
 
 
 Getting Started on Mac OS 10.6
@@ -94,8 +90,6 @@ Getting Started on Mac OS 10.6
 
   # **C**hange **D**irectory to where you want to store Git's source files
   cd ~/Sources/ # where I store source code that I don't work on
-
-[TODO: paste install code from reference below here]
 
 Reference: <http://www.mattdipasquale.com/node/35>
 
@@ -143,7 +137,6 @@ RVM: <http://rvm.beginrescueend.com/rvm/basics/>
   bundle lock
 
 #### Heroku
-
   gem install heroku
 
 ### Install MongoDB
@@ -154,6 +147,28 @@ RVM: <http://rvm.beginrescueend.com/rvm/basics/>
   launchctl unload -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
   cp /usr/local/Cellar/mongodb/1.4.3-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents
   launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
+
+### Node.js & Redis chat server
+
+Follow the README files below to install Node.js & Redis:
+
+* http://github.com/ry/node
+* http://github.com/antirez/redis
+
+  # Open Terminal to start the Node.js server:
+  cd acani-node
+  node acani-node-server.js
+
+  # Open a 2nd Terminal tab/window to start the Redis server:
+  /path/to/redis/src/redis-server redis.conf
+
+  # (Optional) Open a 3rd Terminal tab/window to start a Redis client.
+  /path/to/redis/src/redis-cli # allows you to query the Redis server
+  # For example:
+  smembers online # show members in set 'online'
+  srem online bob # remove 'bob' from set 'online'
+  
+  open index.html # in a browser that supports WebSockets & has a JS Console
 
 
 API
@@ -176,9 +191,10 @@ The archive can be found at <http://librelist.com/browser/>.
 Team
 ----
 
-* Matt Di Pasquale - Project Manager & Server Software Engineer
+* Matt Di Pasquale - Project Manager & Software Engineer
+* Aaron
+* John Ferro
 * Abhinav Sharma - iPhone Software Engineer
-* Peng - iPhone UI Designer
 * Joe Di Pasquale - Advisor
 * Josh Kronick - Graphic Designer (potential)
 * Paul Di Pasquale - Investor (potential)

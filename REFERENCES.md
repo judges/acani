@@ -7,6 +7,7 @@ References
 * http://github.com/bobthabuilda/node-websocket-chat
 * http://github.com/gimite/web-socket-ruby
 * erlang & ejabberd
+* Google: experimenting with node.js
 
 ### node chat
 * github.com/scottgonzalez/node-chat
