@@ -1,9 +1,6 @@
 [submodule "acani-sinatra"]
 	path = acani-sinatra
 	url = git@github.com:acani/acani-sinatra.git
-[submodule "acani-chat"]
-	path = acani-chat
-	url = git@github.com:acani/acani-chat.git
 [submodule "acani-node"]
 	path = acani-node
 	url = git@github.com:acani/acani-node.git
