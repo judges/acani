@@ -86,10 +86,10 @@ Getting Started on Mac OS 10.6
 
 #### Download & Install from Source on Mac OS 10.6
 
-  Run the following terminal commands:
+Run the following terminal commands:
 
-  # **C**hange **D**irectory to where you want to store Git's source files
-  cd ~/Sources/ # where I store source code that I don't work on
+    # **C**hange **D**irectory to where you want to store Git's source files
+    cd ~/Sources/ # where I store source code that I don't work on
 
 Reference: <http://www.mattdipasquale.com/node/35>
 
@@ -97,15 +97,15 @@ Reference: <http://www.mattdipasquale.com/node/35>
 
 Run the following terminal commands:
 
-  # **C**hange **D**irectory to where you want to store acani's source files
-  cd ~/Projects/ # where I store projects that I work on
+    # **C**hange **D**irectory to where you want to store acani's source files
+    cd ~/Projects/ # where I store projects that I work on
   
-  # Clone the repository to your machine 
-  git clone git@github.com:acani/acani.git
+    # Clone the repository to your machine 
+    git clone git@github.com:acani/acani.git
   
-  # Initialize & update the submodules according to .gitmodules
-  git submodule init
-  git submodule update
+    # Initialize & update the submodules according to .gitmodules
+    git submodule init
+    git submodule update
 
 #### Required Reading
 
@@ -113,40 +113,57 @@ Run the following terminal commands:
 * Workflow: [link to git workflow]
 * Great Book: <http://book.git-scm.com/>
 
+You can now `open acani-chat/Lovers2/Lovers.xcodeproj` and build & run it with
+minimal functionality. To unlock more functionality, keep reading.
+
 
 ### Install Ruby & Gems with RVM
 
 RVM: <http://rvm.beginrescueend.com/rvm/basics/>
 
 #### RVM
-  bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
+    bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
 
 #### Ruby 1.9.1
-  rvm install 1.9.1 ; rvm 1.9.1
-  ruby -v ; which ruby # check if it's working
+    rvm install 1.9.1; rvm 1.9.1
+    ruby -v; which ruby # check if it's working
 
-#### Gems 
-  rvm gemset create acani # create a gemset for acani
-  rvm --default ruby-1.9.1@acani # set your default ruby & gemset
+#### Gems
+    rvm gemset create acani # create a gemset for acani
+    rvm --default ruby-1.9.1@acani # set your default ruby & gemset
   
-  # Quit & Relaunch Terminal
-  rvm list default ; rvm gemset name # check what your default ruby is
+    # Quit & Relaunch Terminal
+    rvm list default; rvm gemset name # check what your default ruby is
   
-  gem install bundler
-  bundle install  # installs the gems for this rails app, listed in Gemfile
-  bundle lock
+    gem install bundler
+    bundle install # installs the gems for this rails app, listed in Gemfile
+    bundle lock
 
 #### Heroku
-  gem install heroku
+    gem install heroku
 
-### Install MongoDB
+
+### MongoDB
+
+#### Install
 
 <http://www.mongodb.org/display/DOCS/Quickstart>
 
-  # If installing or upgrading with homebrew, automatically load on login with:
-  launchctl unload -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
-  cp /usr/local/Cellar/mongodb/1.4.3-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents
-  launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
+    # If installing or upgrading with homebrew, automatically load on login with:
+    launchctl unload -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
+    cp /usr/local/Cellar/mongodb/1.4.3-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents
+    launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
+
+#### Seed
+
+1. Ask Matt Di Pasquale for the `pics-thms.zip` of sample iPhone images. Or, generate your own by installing ImageMagick & RMagick and nokogiri and running `ruby seed/pics-thbs/get-pics-make-thbs.rb`.
+
+2. Start MongoDB with the command `mongod` if not yet running.
+
+3. Run `ruby profiles.rb` to populate the MongoDB database.
+
+When you build the iPhone app now, thumbnails should populate the UsersView.
+
 
 ### Node.js & Redis chat server
 
@@ -155,26 +172,29 @@ Follow the README files below to install Node.js & Redis:
 * http://github.com/ry/node
 * http://github.com/antirez/redis
 
-  # Open Terminal to start the Node.js server:
-  cd acani-node
-  node acani-node-server.js
+    # Open Terminal to start the Node.js server:
+    cd acani-node
+    node acani-node-server.js
 
-  # Open a 2nd Terminal tab/window to start the Redis server:
-  /path/to/redis/src/redis-server redis.conf
+    # Open a 2nd Terminal tab/window to start the Redis server:
+    /path/to/redis/src/redis-server redis.conf
 
-  # (Optional) Open a 3rd Terminal tab/window to start a Redis client.
-  /path/to/redis/src/redis-cli # allows you to query the Redis server
-  # For example:
-  smembers online # show members in set 'online'
-  srem online bob # remove 'bob' from set 'online'
+    # (Optional) Open a 3rd Terminal tab/window to start a Redis client.
+    /path/to/redis/src/redis-cli # allows you to query the Redis server
+    # For example:
+    smembers online # show members in set 'online'
+    srem online bob # remove 'bob' from set 'online'
   
-  open index.html # in a browser that supports WebSockets & has a JS Console
+    open index.html # in a browser that supports WebSockets & has a JS Console
+
+When you build & run the iPhone app now, you should be able to send & receive
+messages and log in & out.
 
 
 API
 ---
 
-Our API works like the Facebook Graph API:
+Our API will work like the Facebook Graph API:
 <http://developers.facebook.com/docs/api>
 
 
@@ -210,6 +230,7 @@ Meta
 * Flow: <http://www.pivotaltracker.com/projects/87161>
 * Bugs: <http://github.com/acani/acani/issues>
 * List: <acani@librelist.com>
+* Archive: <http://librelist.com/browser/acani/>
 * Chat: <irc://irc.freenode.net/acani>
 
 This project uses [Semantic Versioning][sv].
