@@ -1,6 +1,9 @@
 References
 ==========
 
+### mobile web standards
+* http://www.w3.org/TR/mwabp/
+
 ### node websockets
 * http://github.com/miksago/node-websocket-server
 * http://github.com/Guille/node.websocket.js/
