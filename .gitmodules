@@ -4,3 +4,6 @@
 [submodule "acani-node"]
 	path = acani-node
 	url = git@github.com:acani/acani-node.git
+[submodule "acani-iphone"]
+	path = acani-iphone
+	url = git@github.com:acani/acani-iphone.git
