@@ -1,0 +1,28 @@
+Lovers User Entity:
+	- git pull from the acani directory and again from the acani/acani-chat directory.
+	- open acani/acani-iphone/Lovers/Lovers.xcodeproj file
+
+	- Work through this tutorial: http://developer.apple.com/iphone/library/documentation/DataManagement/Conceptual/iPhoneCoreData01/Introduction/Introduction.html
+
+	- When the user goes to the profile page, it populates the fields with the User me attribute values.
+		- This is done, but height & weight must be translated accordingly. I commented out a function in LoversAppDelegate that's for height conversion. complete it.
+
+	- I think the filter options (sex & age) should be stored in NSUserDefaults because these can stay private.
+
+	- Changing the picker, should change the values of the corresponding attributes of User me in the managedObjectContext. It's doing this now. But needs perfecting.
+
+	- When the User is editing his profile values, it should update the User me. Needs perfecting. The showDistance switch is not being recored.
+
+	- When the User hits the save button, it calls save on the managedObjectContext.
+		- Let's handle error here. We can say something like, if the error persists, please delete & reinstall the application.
+		- It should also send a PUT request. Look at the comments in the save method at the top of the profileViewController.
+
+	- Add a delete profile button to the bottom of the profile page, underneath the clear chats button. it should delete the user's profile.
+
+	- Got to do a nil check on all the values. What happens if it's empty? We can solve this in User.m where the user is set. We can say if nil, set to 0 (Do Not Show). Just be careful. We don't want to PUT 0 values to the server.
+
+	- Look into adding undo support, i.e., undo save, undo delete profile, undo delete picture, etc.
+
+	- Initialize width of default2 UILable because Do Not Show get's cut off if selected when starting with shorter text.
+
+	- Refactor code when done... for example, so many switch statements... How can we minimize code & memory usage, and maximize performance (speed)?
