@@ -11,7 +11,9 @@ Lovers User Entity:
 
 	- Changing the picker, should change the values of the corresponding attributes of User me in the managedObjectContext. It's doing this now. But needs perfecting.
 
-	- When the User is editing his profile values, it should update the User me. Needs perfecting. The showDistance switch is not being recored.
+	- When the User is editing his profile values, it should update the User me. Needs perfecting. Changes to the showDistance switch & name are not being recored.
+
+	- Like we've done for name, create a UITextField for headline. Put it underneath name w/ smaller font. See Grindr.
 
 	- When the User hits the save button, it calls save on the managedObjectContext.
 		- Let's handle error here. We can say something like, if the error persists, please delete & reinstall the application.
@@ -26,3 +28,5 @@ Lovers User Entity:
 	- Initialize width of default2 UILable because Do Not Show get's cut off if selected when starting with shorter text.
 
 	- Refactor code when done... for example, so many switch statements... How can we minimize code & memory usage, and maximize performance (speed)?
+
+	- fbUsername should go at the bottom of the about section on the photoView. See Grindr.

@@ -99,10 +99,10 @@ Run the following terminal commands:
 
     # **C**hange **D**irectory to where you want to store acani's source files
     cd ~/Projects/ # where I store projects that I work on
-  
-    # Clone the repository to your machine 
+
+    # Clone the repository to your machine
     git clone git@github.com:acani/acani.git
-  
+
     # Initialize & update the submodules according to .gitmodules
     git submodule init
     git submodule update
@@ -113,8 +113,16 @@ Run the following terminal commands:
 * Workflow: [link to git workflow]
 * Great Book: <http://book.git-scm.com/>
 
-You can now `open acani-chat/Lovers2/Lovers.xcodeproj` and build & run it with
-minimal functionality. To unlock more functionality, keep reading.
+*CHECKPOINT*: You can now `open acani-iphone/Lovers/Lovers.xcodeproj` in Xcode and build & run it with
+profile functionality (as long as you're connected to the Internet). We're now
+hosting the profile info, and pictures & thumbnails on Heroku, using Sinatra & MongoHQ. For example, go
+here
+http://acani.heroku.com/users/4c96ee4f1467281352000049/26312E44-7A20-5E47-8347-15C8B5B55A21/40.748470/-73.999815
+to see a list of the 20 closest users to the coordinates at the end of the URI.
+
+To unlock chat functionality, skip to "Node.js & Redis chat server" to install
+them locally. Everything in between is just to get Sinatra & MongoDB running
+locally, which you don't really need anymore now that it's running on Heroku.
 
 
 ### Install Ruby & Gems with RVM
@@ -131,10 +139,10 @@ RVM: <http://rvm.beginrescueend.com/rvm/basics/>
 #### Gems
     rvm gemset create acani # create a gemset for acani
     rvm --default ruby-1.9.1@acani # set your default ruby & gemset
-  
+
     # Quit & Relaunch Terminal
     rvm list default; rvm gemset name # check what your default ruby is
-  
+
     gem install bundler
     bundle install # installs the gems for this rails app, listed in Gemfile
     bundle lock
@@ -162,7 +170,9 @@ RVM: <http://rvm.beginrescueend.com/rvm/basics/>
 
 3. Run `ruby profiles.rb` to populate the MongoDB database.
 
-When you build the iPhone app now, thumbnails should populate the UsersView.
+4. In `Constatns.h`, redefine `SINATRA` to the local URI in the comment.
+
+*CHECKPOINT*: When you build the iPhone app now, it will use the profile info, and pictures & thumbnails from your local machine. Congrats! You're a true developer now.
 
 
 ### Node.js & Redis chat server
@@ -184,17 +194,17 @@ Follow the README files below to install Node.js & Redis:
     # For example:
     smembers online # show members in set 'online'
     srem online bob # remove 'bob' from set 'online'
-  
+
     open index.html # in a browser that supports WebSockets & has a JS Console
 
-When you build & run the iPhone app now, you should be able to send & receive
-messages and log in & out.
+*CHECKPOINT*: Now, you should be able to send & receive messages and log in &
+out.
 
 
-API
----
+Public API
+----------
 
-Our API will work like the Facebook Graph API:
+Right now, we have an internal API that the iPhone code uses. Eventually, we'll have a public API for developers of other software to access the acani servers. The public API will work like the Facebook Graph API:
 <http://developers.facebook.com/docs/api>
 
 
@@ -215,9 +225,9 @@ Team
 * Aaron
 * John Ferro
 * Abhinav Sharma - iPhone Software Engineer
-* Joe Di Pasquale - Advisor
-* Josh Kronick - Graphic Designer (potential)
-* Paul Di Pasquale - Investor (potential)
+* Joey D. - Advisor
+* Josh Kronz - Graphic Designer (potential)
+* Paulie D. - Investor (potential)
 * More developers & designers...
 
 
