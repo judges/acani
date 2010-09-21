@@ -120,6 +120,10 @@ here
 http://acani.heroku.com/users/4c96ee4f1467281352000049/26312E44-7A20-5E47-8347-15C8B5B55A21/40.748470/-73.999815
 to see a list of the 20 closest users to the coordinates at the end of the URI.
 
+You can edit some fields of a user profile here:
+http://acani.heroku.com/4c96fa4714672817ae000073/edit
+where 4c96fa4714672817ae000073 is the uid
+
 To unlock chat functionality, skip to "Node.js & Redis chat server" to install
 them locally. Everything in between is just to get Sinatra & MongoDB running
 locally, which you don't really need anymore now that it's running on Heroku.
