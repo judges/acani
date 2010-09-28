@@ -11,9 +11,11 @@ References
 * http://github.com/gimite/web-socket-ruby
 * erlang & ejabberd
 * Google: experimenting with node.js
+* http://github.com/LearnBoost/nodestream
 
-### node chat
+### chat
 * github.com/scottgonzalez/node-chat
+* http://github.com/alexyoung/jschat
 
 ### mongodb geospatial indexing
 * http://www.mongodb.org/display/DOCS/Geospatial+Indexing
