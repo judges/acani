@@ -7,3 +7,6 @@
 [submodule "acani-iphone"]
 	path = acani-iphone
 	url = git@github.com:acani/acani-iphone.git
+[submodule "acani-www"]
+	path = acani-www
+	url = git@github.com:acani/acani-www.git

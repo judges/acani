@@ -1,33 +1,31 @@
-acani
-=====
+[acani][]
+=========
 
-Connect and play with people nearby.
-------------------------------------
+Authentic, Common-Activities Networking Initiative
+--------------------------------------------------
 
-acani allows you to connect and play with people nearby with similar interests.
+Meet people nearby with similar interests.
+-----------------------------------------
 
 **Possibility**: Being loving, adventurous, and connected.
 
 **Outcome**: People & organizations are connecting and playing & working
 together to have fun; grow & give back; and be happy, healthy, wealthy, loving,
-powerful, successful, and fulfilled.
+powerful, successful, abundant, and fulfilled!
 
 
 Definite Chief Aim
 ------------------
 
-On the 13th day of October, 2010, acani will have a net worth of $1,000,000. In
-return, we shall build an extraordinary Web, mobile, & iPhone application called
-acani. We shall cause acani to make it into iPhone's App Store and to attract &
-register 1,000,000 users and generate 1,000,000 weekly active users. We shall
-each spend at least 10 hours/week causing the development & success of acani.
-acani will cause people & organizations to connect and work & play together to
-have fun, to grow & develop, to give back, and to be happy, healthy, wealthy,
-loving, abundant, joyous, powerful, and fulfilled. acani will continue to grow
-at an increasing rate and within one (1) year of it's release, it will have
-spread to other platforms, such as the Web, Android, Blackberry, and more. The
-whole world will be attracted to it as a way to connect with others, have fun,
-and get into action & be productive.
+On the 16th day of March, 2011, acani will be the world's first trillion-dollar
+company, with a net worth of $3,304,167,034,051.97. In return, it will give 100
+times more value to billions of fellow men, women, children, and organizations
+by causing their optimal success & happiness every day in every way. It will
+attract synergistic, effective teams of amazing individuals and lead them in
+developing extraordinary, word-class, Internet/mobile/desktop/server/computer
+applications that will revolutionize the productivity and effectiveness of the
+world by causing people to work together to be healthy, wealthy, loving, and
+abundant.
 
                                                                  SECRET
 
@@ -35,40 +33,52 @@ and get into action & be productive.
 Milestones
 ----------
 
-### Wednesday, October 13, 2010 — 5pm
+### Friday, December 31, 2010 — 11:59pm EST
 
-* iPhone app version 1.0.0 complete and submitted to the App Store
+* iPhone app, version 1.0.0, approved & available in the App Store
+* Web app, version 1.0.0, launched at <http://www.acani.com>
+
+### Friday, December 17, 2010 — 5:00pm EST
+
+* iPhone app, version 1.0.0, complete and submitted to the App Store
 
 
 Resources
 ---------
 
-MacBook, Terminal, TextMate, Firefox, Internet, iPhone, Pivotal Tracker, GitHub,
-Heroku, UserVoice, HTML5, CSS, JavaScript, JQuery, Ruby, Rails, MongoDB,
-Facebook, Twitter, 10 hours/week, $5,000...
+MacBook, Terminal, TextMate, Firefox, FireBug, Google Chrome, Safari, Internet,
+iPhone, Pivotal Tracker, GitHub, Heroku, Joyent, UserVoice, HTML5, CSS3,
+JavaScript, JQuery, Ruby, Sinatra, MongoDB, Node.js, Redis, Facebook, Twitter,
+10 hours/week, $10,000.
 
 
 Platforms
 ---------
 
+* Internet
+  * HTML5, CSS3, JavaScript
+  * Site: http://www.acani.com/
+  * API: http://api.acani.com/
 * Mobile
-  * HTML5
   * iPhone
   * Blackberry
   * Android
   * Microsoft
-* Web
-  * Site: http://www.acani.com/
-  * API: http://api.acani.com/
 * Desktop
   * Chrome OS
+  * Mac OS
+  * Windows
+  * Linux
+* Server
+  * Node.js & Redis on Joyent
+  * Sinatra & MongoDB on Heroku
 
 
 Inspirations
 ------------
 
-* Facebook & three20
 * Grindr
+* Facebook & Three20
 * Accidental Billionaires & The Social Network
 
 
@@ -113,10 +123,10 @@ Run the following terminal commands:
 * Workflow: [link to git workflow]
 * Great Book: <http://book.git-scm.com/>
 
-*CHECKPOINT*: You can now `open acani-iphone/Lovers/Lovers.xcodeproj` in Xcode and build & run it with
-profile functionality (as long as you're connected to the Internet). We're now
-hosting the profile info, and pictures & thumbnails on Heroku, using Sinatra & MongoHQ. For example, go
-here
+*CHECKPOINT*: You can now `open acani-iphone/Lovers/Lovers.xcodeproj` in Xcode
+and build & run it with profile functionality (as long as you're connected to
+the Internet). We're now hosting the profile info, and pictures & thumbnails on
+Heroku, using Sinatra & MongoHQ. For example, go here
 http://acani.heroku.com/users/4c96ee4f1467281352000049/26312E44-7A20-5E47-8347-15C8B5B55A21/40.748470/-73.999815
 to see a list of the 20 closest users to the coordinates at the end of the URI.
 
@@ -168,15 +178,16 @@ RVM: <http://rvm.beginrescueend.com/rvm/basics/>
 
 #### Seed
 
-1. Ask Matt Di Pasquale for the `pics-thms.zip` of sample iPhone images. Or, generate your own by installing ImageMagick & RMagick and nokogiri and running `ruby seed/pics-thbs/get-pics-make-thbs.rb`.
+1. Start MongoDB with the command `mongod` if not yet running.
 
-2. Start MongoDB with the command `mongod` if not yet running.
+2. Run `ruby acani-sinatra/seed/profiles.rb` to populate the MongoDB database.
 
-3. Run `ruby profiles.rb` to populate the MongoDB database.
+3. In `Constatns.h` in `acani-iphone/Lovers/Lovers.xcodeproj`, redefine
+   `SINATRA` to the local URI in the comment.
 
-4. In `Constatns.h`, redefine `SINATRA` to the local URI in the comment.
-
-*CHECKPOINT*: When you build the iPhone app now, it will use the profile info, and pictures & thumbnails from your local machine. Congrats! You're a true developer now.
+*CHECKPOINT*: When you build the iPhone app now, it will use the profile info,
+and pictures & thumbnails from your local machine. Congrats! You're a true
+developer now.
 
 
 ### Node.js & Redis chat server
@@ -208,7 +219,9 @@ out.
 Public API
 ----------
 
-Right now, we have an internal API that the iPhone code uses. Eventually, we'll have a public API for developers of other software to access the acani servers. The public API will work like the Facebook Graph API:
+Right now, we have an internal API that the iPhone code uses. Eventually, we'll
+have a public API for developers of other software to access the acani servers.
+The public API will work like the Facebook Graph API:
 <http://developers.facebook.com/docs/api>
 
 
@@ -248,3 +261,7 @@ Meta
 * Chat: <irc://irc.freenode.net/acani>
 
 This project uses [Semantic Versioning][sv].
+
+
+[acani]: http://www.acani.com/
+[sv]: http://semver.org/

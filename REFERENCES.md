@@ -42,6 +42,9 @@ References
 * http://github.com/clarkware/iphone-rails-tutorial
 * http://github.com/erica/iphone-3.0-cookbook-
 * http://developer.apple.com/iphone/index.action
+* http://github.com/effectiveprogramming/ep-iphone/wiki/Core-Data
+* http://cocoawithlove.com/2010/02/differences-between-core-data-and.html
+* http://inessential.com/2010/02/26/on_switching_away_from_core_data
 
 ### other cool projects
 * http://github.com/sschroed/git-phone
