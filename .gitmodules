@@ -1,12 +1,12 @@
 [submodule "acani-sinatra"]
 	path = acani-sinatra
-	url = git@github.com:acani/acani-sinatra.git
+	url = https://github.com/acani/acani-sinatra.git
 [submodule "acani-node"]
 	path = acani-node
-	url = git@github.com:acani/acani-node.git
+	url = https://github.com/acani/acani-node.git
 [submodule "acani-iphone"]
 	path = acani-iphone
-	url = git@github.com:acani/acani-iphone.git
+	url = https://github.com/acani/acani-iphone.git
 [submodule "acani-www"]
 	path = acani-www
-	url = git@github.com:acani/acani-www.git
+	url = https://github.com/acani/acani-www.git
