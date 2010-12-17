@@ -1,4 +1,18 @@
-acani tasks:
+1.0.0:
+	WelcomeView:
+		- Design logo (at-sign); Put at top
+		- Add paragraph
+			- "Meet people nearby you with similar interests."
+		- Add default & active FBConnect button image backgrounds
+		- Add notes below FBConnect button:
+			- We will only publish stories that you confirm.
+			- You can remove the acani app at any time.
+			- We verify that all users are genuine.
+Future:
+	WelcomeView:
+		- Split testing with NSURLConnection to maximize % of users that connect via Facebook
+		- Design & add background image like SCVNGR's
+		
 	Next:
 		- User profile & settings storage
 		- Users tableView
@@ -74,12 +88,15 @@ Backlog:
 	Git:
 		- Make acani-iphone a Git submodule
 
-Misc:
-	- Get RackSpace hosting
-	- Get iPhone Developer account
+Finance:
+	- Apply for EIN online
+	- Open acani bank account during lunch in NYC
+	- Link this bank account to iTunesConnect
+
+Production:
+	- Deploy to acani.no.de
+	- Get affordable hosting (Amazon)
 
 Get Matt Situated:
 	- get him a wireless card so he can use wireless on train
-	- Get new bag
-	- Get sleep
-	- Get apartment
+	- Get to sleep by 9:30pm every night.
