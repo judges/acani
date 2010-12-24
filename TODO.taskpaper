@@ -1,18 +1,92 @@
-1.0.0:
-	WelcomeView:
+v. 1.0.0:
+	AppDelegate:
+		Life Cycle:
+			- On launch, set myUser if FBConnection exists.
+				- Else, redirect to WelcomeView.
+		Location:
+			- Make a global function to get location asynchronously.
+			- Check location every 3 minutes; send to server if greater than 3 miles from last sent location.
+
+	WelcomeView:  @Matt
+		Shown on first log in
 		- Design logo (at-sign); Put at top
 		- Add paragraph
-			- "Meet people nearby you with similar interests."
+			- "Meet people nearby with similar interests."
 		- Add default & active FBConnect button image backgrounds
 		- Add notes below FBConnect button:
-			- We will only publish stories that you confirm.
-			- You can remove the acani app at any time.
-			- We verify that all users are genuine.
-Future:
+			- [Your privacy](link/to/privacy-policy) is 100% protected.
+				- Only stories you approve will be published.
+				- You may completely remove acani & your info at any time.
+				- We verify that all users are real.
+		- Add "Connect Anonymously" button below FBConnect button.
+		PrivacyPolicyView: @Matt
+			Modal view linked to from the WelcomeView
+			- Simple textView with userInteraction disabled.
+			- Model after Lovers privacy policy.
+
+	Point System:
+		- FConnect: 10 pts
+		- Post photo: 10 pts
+		- Send msessage: 2 pts
+		- Reply to message: 1 pt
+
+	InterestsView: @Matt
+		List of interests
+		- My Interests / All Interests
+			- Nested lists of interests
+		Server:
+			- Sinatra & MongoDB serve collection as JSON
+
+	UsersView:
+		- LoadMore
+		- Settings button in upper right.
+			- Filtering
+
+	ProfileView:
+		
+	PhotoView:
+		- Serve 2X photos for high-res devices
+		- Cache large photos in filesystem
+
+	Chat:
+		Server:
+			node.js & redis
+			- Store messages in MongoDB
+		View:
+			- See earlier messages (pagination)
+
+Future Versions:
 	WelcomeView:
 		- Split testing with NSURLConnection to maximize % of users that connect via Facebook
 		- Design & add background image like SCVNGR's
 		
+	LauncherView:
+		Like the Facebook iPhone app
+		- Account button in upper left
+			- Logout
+			- Settings
+		- Icons
+			- Interests
+			- Messages
+			- Profile
+	
+	InteresteView:
+		- List all interests
+		- My Interests / All Interests
+		- Add pictures
+
+	UsersView:
+		- Search by keyword or username
+
+	MessagesView:
+		Shows all messages, like iPhone's native Messages app
+		- Rewrite chat server
+		ChatView:
+			- Fix rotation bug
+			- Add receivers
+
+
+	
 	Next:
 		- User profile & settings storage
 		- Users tableView
