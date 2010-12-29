@@ -41,6 +41,7 @@ v. 1.0.0:
 		- LoadMore
 		- Settings button in upper right.
 			- Filtering
+		- Handle empty JSON array response
 
 	ProfileView:
 		
@@ -158,10 +159,20 @@ Recurring:
 	- Push to Git after adding each new feature. Make sure it builds first.
 	- Keep TODO, README (getting started, etc.), RECIPES, HISTORY, etc. up to date
 
-Backlog:
-	Git:
-		- Make acani-iphone a Git submodule
 
+Refactoring:
+	PhotoView:
+		- Make a captionLabel class.
+	ManagedObject:
+		- Profile & Interests: Abstract findById methods into one (with Category?).
+	RefreshableViewController:
+		- Make function displayRefreshButton(target, title, selector).
+			- InterestsViewController & UsersViewController
+	Style:
+		- Make every line max 100 columns, like Three20.
+
+Bugs:
+	- set breakpoint on malloc_error_break and click acani, then back.
 Finance:
 	- Apply for EIN online
 	- Open acani bank account during lunch in NYC
