@@ -170,7 +170,8 @@ Refactoring:
 			- InterestsViewController & UsersViewController
 	Style:
 		- Make every line max 100 columns, like Three20.
-
+	NSURLConnection:
+		- Make generic Request class (like FBRequest) for saveProfile & join/leaveInterest.
 Bugs:
 	- set breakpoint on malloc_error_break and click acani, then back.
 Finance:
